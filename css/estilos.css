@@ -1,0 +1,125 @@
+@font-face{
+	font-family: "dancing-script";
+	src: url(DancingScript-Regular.otf);
+}
+body{
+	background-color: #02010a;
+	
+}
+#contenedorindex{
+	display: flex;
+	flex-direction: column;
+	font-family: "dancing-script";
+}
+header{
+display: inline-block;
+width: 100%;
+background-color: #5b7989;
+border-radius: 10px 10px 0px 0px;
+animation: animacionslidein 1s;/*animacion slidein, para recordar*/
+}
+#cabecera li{
+display: inline;
+}
+#cabecera li a{
+text-decoration: none;
+	color: white;
+	margin-right: 10px;
+}
+#cabecera h1{
+display: inline;
+color: white;
+text-shadow: 2px 2px 2px #02010a;
+margin-left: 15px;
+}
+ul{
+float: right;
+display: inline;
+}
+#parte1{
+	background: #82c3a6;
+	text-align: center;
+	width: 100%;
+}
+#parte2{
+	display: flex;
+	background-color: #d5c75f;
+	border: 1px solid;
+}
+#parte2 div { 
+text-align: center;
+flex-basis: 50%;
+}
+footer{
+	display: flex;
+	background-color: #C6d5c5;
+	border-radius: 0 0 10px 10px;
+	width: 100%;
+	font-size: 20px;
+}
+footer div{	
+	flex-basis: 25%;
+	margin: 0 auto;
+	margin-left: 20px;
+}
+footer div p img{
+	width: 10%;
+	height: 10%;
+	margin-right: 10px;
+}
+#piedepagina div p a{
+	text-decoration: none;
+	color: black;
+}
+img{
+ -webkit-filter: drop-shadow(2px 2px 2px  #02010a);
+}
+#imagen2 img{
+	border: 2px solid;
+	transition-property: rotate;
+	transition-duration: 1s;
+}
+#imagen2 img:hover{
+	transform: rotate(10deg);
+}
+#imagen3 img{
+	border: 2px solid;
+	transition-property: translate;
+    transition-duration: 1s;
+}
+#imagen3 img:hover{
+	transform: translate(20px, -5px);
+}
+@-webkit-keyframes animacionslidein {
+	0%{ margin-top: 150%; }
+	60%{ margin-top: -5%; }
+	100%{ margin-top: 0%; }
+}/*animacion slidein, para recordar*/
+
+@media (max-width: 899px){
+	#contenedorindex{
+		width: 100%;
+		margin: 0 auto;
+	}
+	header{
+		display: flex;
+		flex-direction: column;
+	}
+	#enlaces{
+		padding-left: 30%;
+	}
+	#piedepagina{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	#parte2{
+			flex-direction: column;
+	}
+}
+@media  (min-width:900px){
+	#contenedorindex{
+	    width: 900px;
+		margin: 0 auto;
+	}
+}
